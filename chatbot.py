@@ -312,16 +312,46 @@ if st.session_state.show_sidebar_map:
 if st.sidebar.button("❓ Ask Query"):
     st.session_state.show_input = True
 
-
-# Header
-st.title("Tata BlueScope Steel Chatbot")
-st.markdown("### 👋 Hello! How can I help you?")
-st.markdown("##### 💬 Inspiring Possibilities.")
 st.markdown("""
-<div style="font-family: cursive; font-size: 15px;">
-    We create and inspire smart solutions in steel, to strengthen our communities for the future.
-</div>
+    <style>
+    .main-header {
+        font-family: 'Segoe UI', sans-serif;
+        color: #1a1a1a !important;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .main-subheader {
+        font-family: 'Segoe UI', sans-serif;
+        color: #333333 !important;
+        font-size: 20px;
+        text-align: center;
+        margin-top: -10px;
+    }
+
+    .main-tagline {
+        font-family: 'Segoe UI', sans-serif;
+        color: #444444 !important;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        .main-header { font-size: 22px !important; }
+        .main-subheader { font-size: 18px !important; }
+        .main-tagline { font-size: 14px !important; }
+    }
+    </style>
+
+    <h1 class="main-header">Tata BlueScope Steel Chatbot</h1>
+    <h3 class="main-subheader">👋 Hello! How can I help you?</h3>
+    <h5 class="main-tagline">💬 Inspiring Possibilities.</h5>
+    <div style="font-family: cursive; font-size: 15px; text-align:center; color:#555 !important;">
+        We create and inspire smart solutions in steel, to strengthen our communities for the future.
+    </div>
 """, unsafe_allow_html=True)
+
 
 # Session states
 if "show_input" not in st.session_state:
