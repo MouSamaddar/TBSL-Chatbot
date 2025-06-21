@@ -25,7 +25,7 @@ def respond_with_voice(text):
 # ✅ Must be the first Streamlit command
 st.set_page_config(
     page_title="Tata BlueScope Steel Chatbot",
-    page_icon="images\logotbsl.jpg",
+    page_icon="logotbsl.jpg",
     layout="centered"
 )
 
@@ -53,7 +53,7 @@ def set_sidebar_background(image_path):
         <style>
         [data-testid="stSidebar"] > div:first-child {{
              background: linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)),
-                        url("data:image/gif;base64,{img_data}");
+                        url("data:gif;base64,{img_data}");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -62,8 +62,8 @@ def set_sidebar_background(image_path):
     """, unsafe_allow_html=True)
 
 # ✅ Apply background
-set_background("images\chatbot.gif")
-set_sidebar_background("images\sidepanel.jpg")
+set_background("chatbot.gif")
+set_sidebar_background("sidepanel.jpg")
 
 
 
