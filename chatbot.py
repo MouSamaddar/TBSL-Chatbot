@@ -312,48 +312,15 @@ if st.session_state.show_sidebar_map:
 if st.sidebar.button("❓ Ask Query"):
     st.session_state.show_input = True
 
+# Header
+st.title("Tata BlueScope Steel Chatbot")
+st.markdown("### 👋 Hello! How can I help you?")
+st.markdown("##### 💬 Inspiring Possibilities.")
 st.markdown("""
-<style>
-.header-box {
-    position: absolute;
-    top: 140px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    width: 90%;
-    z-index: 10;
-}
-.header-box h1 {
-    font-size: 2.4em;
-    font-weight: bold;
-    margin-bottom: 0.2em;
-    color: black;
-}
-.header-box h3 {
-    font-size: 1.5em;
-    margin-top: 0;
-    margin-bottom: 0.2em;
-    color: black;
-}
-.header-box h4 {
-    margin: 0.1em 0;
-    color: black;
-}
-.header-box p {
-    font-size: 1.1em;
-    font-family: cursive;
-    color: black;  /* ✅ Ensures the paragraph is black */
-}
-</style>
-
-<div class="header-box">
-    <h1>Tata BlueScope Steel Chatbot</h1>
-    <h3>👋 Hello! How can I help you?</h3>
-    <h4>💬 Inspiring Possibilities.</h4>
-    <p>We create and inspire smart solutions in steel, to strengthen our communities for the future.</p>
+<div style="font-family: cursive; font-size: 15px;">
+    We create and inspire smart solutions in steel, to strengthen our communities for the future.
 </div>
 """, unsafe_allow_html=True)
-
 
 # Session states
 if "show_input" not in st.session_state:
@@ -510,17 +477,9 @@ if st.session_state.show_input:
         st.session_state.is_typing = False
 
 
-st.markdown("""
-<style>
-.query-header {
-    color: black;
-    font-size: 1.6em;
-    font-weight: bold;
-    margin-top: 2em;
-}
-</style>
-<div class="query-header">🧾 Queries</div>
-""", unsafe_allow_html=True)
+# Display chat history 
+with chat_container:
+    st.markdown("### 🧾 Queries")
 
 
     # Initialize feedback state
