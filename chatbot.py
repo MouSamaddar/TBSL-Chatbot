@@ -25,7 +25,7 @@ def respond_with_voice(text):
 # ✅ Must be the first Streamlit command
 st.set_page_config(
     page_title="Tata BlueScope Steel Chatbot",
-    page_icon="logotbsl.jpg",
+    page_icon="logotbsl.jpg",  # Now directly in the root folder
     layout="centered"
 )
 
@@ -37,7 +37,7 @@ def set_background(image_file):
         <style>
         .stApp {{
             background: linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)),
-                        url("data:gif;base64,{encoded}");
+                        url("data:image/gif;base64,{encoded}");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -53,7 +53,7 @@ def set_sidebar_background(image_path):
         <style>
         [data-testid="stSidebar"] > div:first-child {{
              background: linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)),
-                        url("data:gif;base64,{img_data}");
+                        url("data:image/jpg;base64,{img_data}");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -64,7 +64,6 @@ def set_sidebar_background(image_path):
 # ✅ Apply background
 set_background("chatbot.gif")
 set_sidebar_background("sidepanel.jpg")
-
 
 
 # ✅ Hide Streamlit default header and footer (including the Deploy button area)
