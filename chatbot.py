@@ -37,7 +37,7 @@ def set_background(image_file):
         <style>
         .stApp {{
             background: linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)),
-                        url("data:image/gif;base64,{encoded}");
+                        url("data:gif;base64,{encoded}");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
