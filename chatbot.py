@@ -494,7 +494,7 @@ with chat_container:
         st.markdown(f"""
             <div class="user-msg">🧑‍💻: {q}</div>
             <div class="bot-msg" style="position: relative; color: white; padding: 14px 18px; border-radius: 12px; margin: 8px 0; max-width: 700px;">
-                🤖: {r}
+                💬: {r}
                 <span id="{speaker_id}" 
                       style="position: absolute; bottom: 8px; right: 14px; cursor: pointer;" 
                       title="Click to listen">🔊</span>
