@@ -313,43 +313,45 @@ if st.sidebar.button("❓ Ask Query"):
     st.session_state.show_input = True
 
 st.markdown("""
-    <style>
-    .main-header {
-        font-family: 'Segoe UI', sans-serif;
-        color: #1a1a1a !important;
-        text-align: center;
-        margin-bottom: 0.5rem;
-    }
+<style>
+.header-box {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 90%;
+    z-index: 10;
+}
+.header-box h1 {
+    font-size: 2.4em;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+    color: black;
+}
+.header-box h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 0.2em;
+    color: black;
+}
+.header-box h4 {
+    margin: 0.1em 0;
+    color: black;
+}
+.header-box p {
+    font-size: 1.1em;
+    font-family: cursive;
+    color: black;  /* ✅ Ensures the paragraph is black */
+}
+</style>
 
-    .main-subheader {
-        font-family: 'Segoe UI', sans-serif;
-        color: #333333 !important;
-        font-size: 20px;
-        text-align: center;
-        margin-top: -10px;
-    }
-
-    .main-tagline {
-        font-family: 'Segoe UI', sans-serif;
-        color: #444444 !important;
-        font-size: 16px;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    @media (max-width: 768px) {
-        .main-header { font-size: 22px !important; }
-        .main-subheader { font-size: 18px !important; }
-        .main-tagline { font-size: 14px !important; }
-    }
-    </style>
-
-    <h1 class="main-header">Tata BlueScope Steel Chatbot</h1>
-    <h3 class="main-subheader">👋 Hello! How can I help you?</h3>
-    <h5 class="main-tagline">💬 Inspiring Possibilities.</h5>
-    <div style="font-family: cursive; font-size: 15px; text-align:center; color:#555 !important;">
-        We create and inspire smart solutions in steel, to strengthen our communities for the future.
-    </div>
+<div class="header-box">
+    <h1>Tata BlueScope Steel Chatbot</h1>
+    <h3>👋 Hello! How can I help you?</h3>
+    <h4>💬 Inspiring Possibilities.</h4>
+    <p>We create and inspire smart solutions in steel, to strengthen our communities for the future.</p>
+</div>
 """, unsafe_allow_html=True)
 
 
@@ -508,9 +510,18 @@ if st.session_state.show_input:
         st.session_state.is_typing = False
 
 
-# Display chat history 
-with chat_container:
-    st.markdown("### 🧾 Queries")
+st.markdown("""
+<style>
+.query-header {
+    color: black;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-top: 2em;
+}
+</style>
+<div class="query-header">🧾 Queries</div>
+""", unsafe_allow_html=True)
+
 
     # Initialize feedback state
     if "feedback_given" not in st.session_state:
