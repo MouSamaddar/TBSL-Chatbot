@@ -61,7 +61,7 @@ The chatbot uses **Streamlit** to render a sleek web interface where users can t
 3. Run the Streamlit app:
 
    ```bash
-   streamlit run tbsl_chatbot.py  
+   streamlit run chatbot.py  
    ```
 
 
